@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #edf2f6;
+    text-shadow:1px -1px 5px black;
+}
+
+a {
+    font-size: 10px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.container{
+    background: #edf2f6;
+    display: flex;
+    flex-wrap: wrap;
+    height: 626px;    
+}
+
+.one ,.two{    
+    width: 100%;       
+    display: flex;   
+}
+
+.large, .small, .smallone, .down, .large2 {
+    width: 100%;
+    display: flex;   
+    flex-wrap: wrap;
+    flex-basis: 100px;
+    flex-grow: 1;   
+    margin: 5px; 
+}
+
+.large2{
+    flex-direction: column;
+}
+
+.large2 .title{
+    background: #6a7efc;
+}
+
+.large2 .item{
+    background: #ff565621;
+}
+
+.title{
+    background: #ff5656c7;
+    width: 100%;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 10px -3px black;
+    text-align: center;
+    font-size: 18px;
+}
+
+.title h1{
+    font-size: 25px;
+    
+}
+
+.item{
+    width: 100%;
+    /* background: orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 10px -3px black;
+    background: #6a7efc2f;
+    color: #494953; 
+    text-shadow: none;
+}
+
+.able{
+    display: none;        
+}
+
+.able h1{
+    color: #49495398;
+    text-shadow: none;
+    margin-top: 17px;
+}
+
+.info{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.msg{
+    margin-top: 5px;
+    padding: 10px; 
+    box-shadow: 1px 3px 10px -3px black;    
+}
+
+.msg p{
+    color: #494953;
+    text-shadow: none;
+}
+
+@media (max-width: 600px){
+
+    .one, .two{
+        flex-direction: column;  
+        margin: 5px; 
+    }
+
+    .large{
+        margin-bottom: 5px;
+    }
+
+    .large2{
+        flex-direction: row;
+    }
+    .large2 .small, .large2 .smallone{
+            /* margin-right: 2px;
+            margin-bottom: 5px; */
+        text-align: center;
+        font-size: 13px;
+    } 
+
+    .able{
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .title{
+        box-shadow: none;
+    }
+
+    .item{
+        /* box-shadow: 1px 3px 10px -3px #ccc ; */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+    }
+}
